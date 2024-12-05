@@ -14,7 +14,7 @@ function App() {
   const checkName=async (pname)=>{
     try{
 
-      const adding =await fetch('http://localhost:3000/', {
+      const adding =await fetch('https://snake-backend-0rta.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        const response = await fetch('http://localhost:3000/ranks');
+        const response = await fetch('https://snake-backend-0rta.onrender.com/ranks');
         const data = await response.json();
         const sortedData = data.sort((a, b) => b.score - a.score);
         setLeader1(sortedData);
@@ -112,7 +112,7 @@ function App() {
   }, []); 
   const submitScore = async ()=>{
     try{
-      const sendScore =await fetch('http://localhost:3000/subscore', {
+      const sendScore =await fetch('https://snake-backend-0rta.onrender.com/subscore', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ function App() {
     if(adminData.playerName != '' && adminData.playerScore != '' && adminData.adminPassword != ''){
       try{
 
-        const adding =await fetch('http://localhost:3000/addPlayer', {
+        const adding =await fetch('https://snake-backend-0rta.onrender.com/addPlayer', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
