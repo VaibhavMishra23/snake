@@ -1,0 +1,60 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.box{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(87, 251, 33);
+}
+#score{
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+#userName{
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+#gamebox{
+  background-color: rgb(133, 133, 254);
+  display: grid;
+  grid-template-columns: repeat(18,1fr);
+  grid-template-rows: repeat(20,1fr);
+  width: 50vw;
+  height: 100vh;
+  margin: auto;
+}
+#admin{
+  position: absolute;
+  top: 300px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#admin button{
+  width: 100px;
+  margin: auto;
+}
+#admin input{
+  width: 200px;
+  height: 30px;
+}
+#leader{
+  position: absolute;
+  top: 300px;
+  left: 30px;
+}
+#leader ul{
+  list-style: none;
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+}
