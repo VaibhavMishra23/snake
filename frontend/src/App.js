@@ -14,7 +14,7 @@ function App() {
   const checkName=async (pname)=>{
     try{
 
-      const adding =await fetch("https://snake-backend-0rta.onrender.com/", {
+      const adding =await fetch('https://snake-backend-0rta.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ function App() {
         setSpeed(155);
       }
       // food generate
-      if(inputDir.x==food.x && inputDir.y == food.y){
+      if(inputDir.x===food.x && inputDir.y === food.y){
         foodGen();
         setScore(scr => scr+1);
         setSpeed((prev)=>prev-5);
@@ -155,14 +155,14 @@ function App() {
     }, speed);
 
     return () => clearInterval(interval);
-  }, [currentKey,inputDir]);
+  }, [currentKey, inputDir, isCollied, moveSnake, score, speed, submitScore,food.x,food.y]);
 
   const handleKeyPress = (e) => {
     setCurrentKey(e.key);
   };
 
   const handleOnClick = async ()=>{
-    if(adminData.playerName != '' && adminData.playerScore != '' && adminData.adminPassword != ''){
+    if(adminData.playerName !== '' && adminData.playerScore !== '' && adminData.adminPassword !== ''){
       try{
 
         const adding =await fetch("https://snake-backend-0rta.onrender.com/addPlayer", {
